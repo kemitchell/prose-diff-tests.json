@@ -1,4 +1,5 @@
 {
+  "description": "integration tests for prose diff algorithms",
   "private": true,
   "devDependencies": {
     "glob": "^7.1.6",
