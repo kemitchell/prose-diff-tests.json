@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+var fs = require('fs')
+var glob = require('glob')
+var path = require('path')
+var yaml = require('js-yaml')
+
+var tests = {}
+glob.sync('tests/*.yml').sort().forEach(function (yml) {
+  var data = yaml.safeLoad(fs.readFileSync(yml, 'utf8'))
+  tests[path.basename(yml, '.yml')] = data
+})
+
+fs.writeFileSync('index.json', JSON.stringify(tests, null, 2))

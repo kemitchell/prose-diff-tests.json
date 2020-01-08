@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "devDependencies": {
+    "glob": "^7.1.6",
+    "js-yaml": "^3.13.1"
+  },
+  "files": [
+    "index.json"
+  ],
+  "scripts": {
+    "prepublish": "./build"
+  }
+}
